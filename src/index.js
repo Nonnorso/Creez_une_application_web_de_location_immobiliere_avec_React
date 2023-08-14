@@ -20,7 +20,7 @@ root.render(
         <Route path ="/" element={<App />} />
         <Route path ="/logement" element={<FicheLogement />} />
         <Route path ="/about" element={<APropos />} />
-        <Route path ="/error404" element={<Error404 />} />
+        <Route path ="*" element={<Error404 />} />
 
       </Routes>
 
