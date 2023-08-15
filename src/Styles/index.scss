@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+h1, p, a {
+  margin:0px;
+}
+
 .WhiteText{
   color:white;
 }
@@ -29,6 +33,13 @@ a {
   }
 }
 
+.SmallText{
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500; 
+}
+
 .MediumSizeText{
   font-family: Montserrat;
   font-size: 24px;
@@ -41,6 +52,20 @@ a {
   font-size: 48px;
   font-style: normal;
   font-weight: 500; 
+}
+
+.Txt404{
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500; 
+}
+
+.Title404{
+  font-family: Montserrat;
+  font-size: 288px;
+  font-style: normal;
+  font-weight: 700; 
 }
 
 .FlexRow{
@@ -105,4 +130,11 @@ margin-bottom:50px;
     margin-top:28.56px;
     margin-bottom:29px;
   }
+}
+
+.Style404{
+margin-top:139px;
+margin-bottom:139px;
+gap:139px;
+align-items: center;
 }
