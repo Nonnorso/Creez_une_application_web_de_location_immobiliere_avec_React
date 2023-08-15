@@ -4,7 +4,8 @@ function homeBanner() {
     
     return (
         <div className="k-banner">
-            <img class="HomeBanner" src={HomeBanner} alt="home_banner" title="home_banner" />
+            <img src={HomeBanner} alt="home_banner" title="home_banner" />
+            <p className="WhiteText LargeText">Chez vous, partout et ailleurs</p>
         </div>
     )
 }

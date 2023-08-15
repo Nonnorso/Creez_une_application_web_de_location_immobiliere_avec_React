@@ -4,13 +4,13 @@ import Logo from '../../assets/LOGO.svg'
  
 function Header() {
     return (
-        <nav class="FlexRow NavStyle">
+        <nav className="FlexRow NavStyle">
 
         <img src={Logo} alt="Logo Kasa" title="Logo Kasa" />
         
-        <div class="LinkStyle">
-            <Link class="MediumSizeText RedText" to="/" >Accueil</Link>
-            <Link class="MediumSizeText RedText" to="/about" >A Propos</Link>
+        <div className="LinkStyle">
+            <Link className="MediumSizeText RedText" to="/" >Accueil</Link>
+            <Link className="MediumSizeText RedText" to="/about" >A Propos</Link>
         {/* <Link to="/logement">Fiche de logement</Link> */}
         </div>
         
