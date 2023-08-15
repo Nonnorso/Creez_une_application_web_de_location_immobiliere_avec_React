@@ -8,6 +8,7 @@ import Error404 from './pages/404/error404';
 import Header from './components/Header/Navigation';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/FooterInfos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,8 @@ root.render(
         <Route path ="*" element={<Error404 />} />
 
       </Routes>
+
+      <Footer />
 
     </Router>
    

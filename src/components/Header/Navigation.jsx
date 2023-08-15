@@ -1,12 +1,19 @@
+import '../../Styles/index.scss'
 import { Link } from 'react-router-dom'
+import Logo from '../../assets/LOGO.svg'
  
 function Header() {
     return (
-        <nav>
+        <nav class="FlexRow NavStyle">
 
-            <Link to="/">Accueil</Link>
-            <Link to="/about">A propos</Link>
-            <Link to="/logement">Fiche de logement</Link> 
+        <img src={Logo} alt="Logo Kasa" title="Logo Kasa" />
+        
+        <div class="LinkStyle">
+            <Link class="MediumSizeText RedText" to="/" >Accueil</Link>
+            <Link class="MediumSizeText RedText" to="/about" >A Propos</Link>
+        {/* <Link to="/logement">Fiche de logement</Link> */}
+        </div>
+        
                  
         </nav>
     )

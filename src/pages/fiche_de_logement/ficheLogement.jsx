@@ -1,9 +1,7 @@
+import LogementBanner from '../../components/Logement_Banner'
+
 function FicheLogement() {
-    return (
-        <div>
-            <h1>Fiche de Logement</h1>
-        </div>
-    )
+    return <LogementBanner />
 }
 
 export default FicheLogement

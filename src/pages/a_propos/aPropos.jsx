@@ -1,9 +1,7 @@
-function APropos() {
-    return (
-        <div>
-            <h1>A propos</h1>
-        </div>
-    )
+import AboutBanner from '../../components/About_Banner'
+
+function aPropos() {
+    return <AboutBanner />
 }
 
-export default APropos
+export default aPropos
