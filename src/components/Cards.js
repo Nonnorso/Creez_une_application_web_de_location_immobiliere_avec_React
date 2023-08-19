@@ -8,7 +8,7 @@ const HouseCard = ({ houseData }) => {
     return (
       <div className="house-card">
         <img src={houseData.cover} alt={houseData.title} />
-        <p class="WhiteText SmallText">{houseData.title}</p>
+        <p className="WhiteText SmallText">{houseData.title}</p>
       </div>
     );
   };
