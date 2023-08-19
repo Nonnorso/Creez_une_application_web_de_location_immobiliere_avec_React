@@ -1,15 +1,16 @@
 import jsonData from '../datas/Annonces.json';
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-//** Vace un fetch **//
+//** Avec fetch **//
 // import React, { useState, useEffect } from 'react';
 
 const HouseCard = ({ houseData }) => {
     return (
-      <div className="house-card">
-        <img src={houseData.cover} alt={houseData.title} />
-        <p className="WhiteText SmallText">{houseData.title}</p>
-      </div>
+        <Link to="/logement" className="house-card">
+            <img src={houseData.cover} alt={houseData.title} />
+            <p className="WhiteText SmallText">{houseData.title}</p>
+        </Link>
     );
   };
 
