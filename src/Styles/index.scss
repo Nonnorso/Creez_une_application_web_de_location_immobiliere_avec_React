@@ -170,8 +170,15 @@ img{
   }
 
   @media (max-width: $smallScreen) {
-    height:111px;
-    margin-bottom:22px;
+    &.B1{
+      height:111px;
+      margin-bottom:22px;
+    }  
+
+    &.B2{
+      width: 336px;
+      height: 223px; 
+    }
 
     p {
       text-align: left;
