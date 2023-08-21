@@ -1,4 +1,8 @@
 $smallScreen: 880px;
+$red :rgba(255, 96, 96, 1);
+$grey:rgba(246, 246, 246, 1);
+$white :rgba(255, 255, 255, 1);
+$black:rgba(0, 0, 0, 1);
 
 body {
   margin-left: 100px;
@@ -29,11 +33,11 @@ h1, p, a {
 }
 
 .WhiteText{
-  color:white;
+  color: $white;
 }
 
 .RedText{
-  color:#FF6060;
+  color:$red;
 }
 
 a {
@@ -148,7 +152,7 @@ img{
 .k-banner{
   mix-blend-mode: darken;
   border-radius: 25px;
-  background: #000; 
+  background: $black; 
   height: 223px;  
   margin-bottom:43px;
   display: flex;
@@ -189,7 +193,7 @@ img{
 }
 
 .footerStyle{
-  background-color: black;
+  background-color: $black;
   margin-right: -100px;
   margin-left: -100px; 
   align-items: center;
@@ -266,7 +270,7 @@ align-items: center;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    color: white;
+    color:$white;
     z-index: 2;
   }
 
@@ -282,7 +286,7 @@ align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 50px 60px;
   border-radius: 25px;
-  background: #F6F6F6;
+  background: $grey;
   padding-top:56px;
   padding-bottom:43px;
   padding-left: 50px;
@@ -302,4 +306,41 @@ align-items: center;
     height: 805px;
     margin-bottom:27px;
   }
+}
+
+.collapse{
+  gap:30px;
+  align-items: center;
+  margin-top: -5px;
+  margin-bottom: 38px;
+  margin-left:135px;
+  margin-right:135px;
+}
+
+.collapseBtn{
+  width:100%;
+  background-color:$red;
+  display: flex;
+  padding: 10px 20px 10px 15px; 
+  border-radius: 5px; 
+  box-sizing: border-box;
+}
+
+.collapseIcon{
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0; 
+}
+
+.collapseTxt {
+  padding: 10px 20px;
+  background-color: $grey;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius:5px;
+}
+
+.collapseOpen {
+  width:100%;
+  align-items: center;
 }
