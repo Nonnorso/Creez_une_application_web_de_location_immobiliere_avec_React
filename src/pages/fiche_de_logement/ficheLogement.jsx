@@ -1,12 +1,15 @@
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import jsonData from '../../datas/Annonces.json';
 
 function FicheLogement() {
   const { id } = useParams();
   const logementData = jsonData.find(house => house.id === id);
+  const navigate = useNavigate();
 
   if (!logementData) {
-    return <p>Logement introuvable</p>;
+    navigate('/404');
+    return null; 
   }
 
   return (
