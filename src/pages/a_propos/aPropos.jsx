@@ -1,6 +1,6 @@
 import AboutBanner from '../../components/About_Banner'
 import Collapse from '../../components/Collapse';
-import collapseIcon from '../../assets/arrow_back_ios-24px 2.svg';
+import collapseIcon from '../../assets/arrow_back_ios-24px 2.png';
 
 function aPropos() {
     return (
@@ -13,7 +13,7 @@ function aPropos() {
             content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes."
           />
-          
+
           <Collapse
             title="Respect"
             icon={<img src={collapseIcon} alt="Icône de Collapse" />}

@@ -173,6 +173,10 @@ img{
     text-align: center;
   }
 
+  &.B2{
+    margin-bottom:38px;
+  }
+
   @media (max-width: $smallScreen) {
     &.B1{
       height:111px;
@@ -180,8 +184,8 @@ img{
     }  
 
     &.B2{
-      width: 336px;
       height: 223px; 
+      margin-bottom:19px;
     }
 
     p {
@@ -311,10 +315,16 @@ align-items: center;
 .collapse{
   gap:30px;
   align-items: center;
-  margin-top: -5px;
   margin-bottom: 38px;
   margin-left:135px;
   margin-right:135px;
+
+  @media (max-width: $smallScreen) {
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:19px;
+    gap:20px;
+  }
 }
 
 .collapseBtn{
@@ -324,14 +334,25 @@ align-items: center;
   padding: 10px 20px 10px 15px; 
   border-radius: 5px; 
   box-sizing: border-box;
+  align-items: center;
+
+  @media (max-width: $smallScreen) {
+    height:30px;
+    padding:10px;
+  }
 }
 
 .collapseIcon{
   cursor: pointer;
-  width: 32px;
-  height: 32px;
   flex-shrink: 0; 
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;transform-origin: center center;
+
+  @media (max-width: $smallScreen) {
+  img{
+    width:20px;
+    height:20px;
+  }
+  }
 
   &.open {
     transform: rotate(-180deg);
