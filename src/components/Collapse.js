@@ -8,14 +8,20 @@ const Collapse = ({ title, content, icon }) => {
   };
 
   return (
-      <div className="collapseOpen FlexColumn">
+      <div className={`collapseOpen FlexColumn`}>
         <div className="collapseBtn FlexRow">
           <p className="WhiteText MediumSizeText">{title}</p>
-          {icon && <span className="collapseIcon" onClick={toggleCollapse}>{icon}</span>}
+          {icon && (
+            <span className={`collapseIcon ${isOpen ? 'open' : ''}`} 
+              onClick={toggleCollapse}>
+              {icon}
+            </span>)}
         </div>
         {isOpen && (
-          <div>
-            <p className="collapseTxt MediumSizeText RedText">{content}</p>
+          <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
+            <p className={`collapseTxt MediumSizeText RedText`}>
+              {content}
+            </p>
           </div>
         )}
       </div>
