@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import jsonData from '../../datas/Annonces.json';
 import Collapse from '../../components/Collapse';
 import collapseIcon from '../../assets/arrow_back_ios-24px 2.png';
+import Slideshow from '../../components/Slideshow';
 
 function FicheLogement() {
   const { id } = useParams();
@@ -16,9 +17,11 @@ function FicheLogement() {
 
   return (
     <div>
+      <div>
+      <Slideshow images={logementData.pictures} />
+      </div>
 
       <div>
-        <img src={logementData.cover} alt={logementData.title} />
       <p>{logementData.title}</p>
       <p>{logementData.location}</p> 
       </div>
