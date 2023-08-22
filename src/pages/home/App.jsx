@@ -1,11 +1,11 @@
 import Banner from '../../components/Banner'
 import Cards from '../../components/Cards'
 
-function App() {
+function App({ jsonData }) {
     return (
         <>
             <Banner />
-            <Cards/>
+            <Cards jsonData={jsonData} />
         </>
     )
 

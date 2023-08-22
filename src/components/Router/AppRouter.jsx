@@ -6,22 +6,21 @@ import Error404 from '../../pages/404/error404';
 import Header from '../../components/Header/Navigation';
 import Footer from '../../components/Footer/FooterInfos';
 import CheckLogement from '../CheckLogement';
+import JsonData from '../ExportData';
 
 function AppRouter() {
     return (
       <Router>
-        <Header />
-  
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/logement/:id" element={<CheckLogement />} />
-          <Route path="/about" element={<APropos />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-  
-        <Footer />
-      </Router>
-    );
-  }
+      <Header />
+      <Routes>
+        <Route path="/" element={<App jsonData={JsonData} />} />
+        <Route path="/logement/:id" element={<CheckLogement jsonData={JsonData} />} />
+        <Route path="/about" element={<APropos />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+}
   
   export default AppRouter;
