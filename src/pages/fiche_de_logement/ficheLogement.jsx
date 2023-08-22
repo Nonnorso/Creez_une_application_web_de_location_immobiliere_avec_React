@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import jsonData from '../../datas/Annonces.json';
+import Collapse from '../../components/Collapse';
+import collapseIcon from '../../assets/arrow_back_ios-24px 2.png';
 
 function FicheLogement() {
   const { id } = useParams();
@@ -14,9 +16,32 @@ function FicheLogement() {
 
   return (
     <div>
-      <img src={logementData.cover} alt={logementData.title} />
+
+      <div>
+        <img src={logementData.cover} alt={logementData.title} />
       <p>{logementData.title}</p>
-      <p>{logementData.description}</p>
+      <p>{logementData.location}</p> 
+      </div>
+         
+      <div>
+        <ul>
+          {logementData.tags.map((tag, index) => (
+            <li key={index}>{tag}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p>{logementData.host.name}</p>
+        <img src={logementData.host.picture} alt="Host" />
+        <span>{logementData.host.rating}</span>
+      </div>
+
+      <div>
+        <Collapse title="Description" content={logementData.description} icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
+        <Collapse title="Équipements" content={logementData.equipments.join(', ')} icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
+      </div>
+
     </div>
   );
 }
