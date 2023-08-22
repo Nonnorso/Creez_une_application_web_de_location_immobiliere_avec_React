@@ -401,18 +401,23 @@ align-items: center;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-height: 415px;
+  max-width: 1240px; 
+  height: 415px;
   position: relative;
   overflow: hidden;
+  border-radius: 25px; 
+  margin: 0 auto;
 
   .CarousselImage {
-    object-fit: contain;
-    object-position: center;
+    width: 100%; 
+    height: auto; 
+    border-radius: 25px;
+    object-fit: cover;
   }
 
   .CarousselCounter {
     position: absolute;
-    bottom: 10px;
+    bottom: 24.92px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -431,11 +436,11 @@ align-items: center;
     }
 
     .LeftArrow {
-      left: 10px;
+      left: 23.36px;
     }
 
     .RightArrow {
-      right: 10px;
+      right: 23.36px;
     }
   }
 }

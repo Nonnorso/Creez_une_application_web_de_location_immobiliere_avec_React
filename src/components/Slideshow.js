@@ -20,7 +20,7 @@ const Slideshow = ({ images }) => {
             <img src={images[currentIndex]} alt={`${currentIndex + 1}`} />
         </div>
 
-        <div className="CarousselCounter">
+        <div className="CarousselCounter SmallText WhiteText">
           {currentIndex + 1}/{images.length}
         </div>
 
