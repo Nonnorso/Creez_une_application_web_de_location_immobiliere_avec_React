@@ -37,7 +37,7 @@ function FicheLogement({ jsonData }) {
       </div>
 
       <div>
-        <LogementRating rating={parseFloat(logementData.rating)} />
+        <LogementRating rating={parseInt(logementData.rating)} />
       </div>
 
       <div>
