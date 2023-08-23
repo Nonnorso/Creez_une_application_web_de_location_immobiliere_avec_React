@@ -3,6 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import collapseIcon from '../../assets/arrow_back_ios-24px 2.png';
 import Slideshow from '../../components/Slideshow';
+import LogementRating from '../../components/LogementRating';
+import LogementHost from '../../components/LogementHost';
+import LogementTags from '../../components/LogementTags';
+import LogementPresentation from '../../components/LogementPresentation';
 
 function FicheLogement({ jsonData }) {
   const { id } = useParams();
@@ -17,26 +21,23 @@ function FicheLogement({ jsonData }) {
   return (
     <div>
       <div>
-      <Slideshow images={logementData.pictures} />
+        <Slideshow images={logementData.pictures} />
       </div>
 
       <div>
-      <p>{logementData.title}</p>
-      <p>{logementData.location}</p> 
-      </div>
-         
-      <div>
-        <ul>
-          {logementData.tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
-          ))}
-        </ul>
+        <LogementPresentation title={logementData.title} location={logementData.location} />
       </div>
 
       <div>
-        <p>{logementData.host.name}</p>
-        <img src={logementData.host.picture} alt="Host" />
-        <span>{logementData.host.rating}</span>
+        <LogementTags tags={logementData.tags} />
+      </div>
+
+      <div>
+        <LogementHost host={logementData.host} />
+      </div>
+
+      <div>
+        <LogementRating rating={parseFloat(logementData.rating)} />
       </div>
 
       <div>

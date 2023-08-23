@@ -10,7 +10,7 @@ import jsonData from '../../datas/Annonces.json';
 
 function AppRouter() {
 
-  // const [jsonData, setJsonData] = useState([]); // État local pour les données JSON
+  // const [jsonData, setJsonData] = useState([]); 
 
   // useEffect(() => {
   //   fetch('/Annonces.json')
