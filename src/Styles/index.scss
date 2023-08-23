@@ -335,6 +335,7 @@ align-items: center;
   border-radius: 5px; 
   box-sizing: border-box;
   align-items: center;
+  overflow: hidden;
 
   @media (max-width: $smallScreen) {
     height:30px;
@@ -364,8 +365,9 @@ align-items: center;
   background-color: $grey;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius:5px;
-  -webkit-animation: slideDownAnimation 0.1s ease-out;
-  animation: slideDownAnimation 0.1s ease-out;
+  overflow: hidden;
+  transform-origin: top;
+  animation: slideDownAnimation 0.2s ease-out;
 }
 
 .collapseOpen {
@@ -376,23 +378,23 @@ align-items: center;
 @keyframes slideDownAnimation {
   0% {
     max-height: 0;
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
     opacity: 0;
+    transform: translateY(-100%);
   }
+
   100% {
     max-height: 1000px;
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .collapseTxtContainer {
   overflow: hidden;
   transform-origin: top;
-  -webkit-animation: slideDownAnimation 0.6s ease-out;
-  animation: slideDownAnimation 0.6s ease-out;
+  -webkit-animation: slideDownAnimation 0.2s ease-out;
+  animation: slideDownAnimation 0.2s ease-out;
+  position: relative;
 }
 
 .CarousselContainer {

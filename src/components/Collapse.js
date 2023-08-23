@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Collapse = ({ title, content, icon }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,23 +9,23 @@ const Collapse = ({ title, content, icon }) => {
   };
 
   return (
-      <div className={`collapseOpen FlexColumn`}>
-        <div className="collapseBtn FlexRow">
-          <p className="WhiteText MediumSizeText">{title}</p>
-          {icon && (
-            <span className={`collapseIcon ${isOpen ? 'open' : ''}`} 
-              onClick={toggleCollapse}>
-              {icon}
-            </span>)}
-        </div>
+    <div className={`collapseOpen FlexColumn`}>
+      <div className="collapseBtn FlexRow" onClick={toggleCollapse}>
+        <p className="WhiteText MediumSizeText">{title}</p>
+        {icon && (
+          <span className={`collapseIcon ${isOpen ? 'open' : ''}`}>
+            {icon}
+          </span>
+        )}
+      </div>
+      <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
         {isOpen && (
-          <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
-            <p className={`collapseTxt MediumSizeText RedText`}>
-              {content}
-            </p>
+          <div className={`collapseTxt MediumSizeText RedText`}>
+            {content}
           </div>
         )}
       </div>
+    </div>
   );
 };
 
