@@ -4,7 +4,6 @@ import filledStarIcon from '../assets/VectorRateStars.png';
 
 const LogementRating = ({ rating }) => {
     const filledStars = Math.round(rating / 1);
-  
     const stars = [];
     for (let i = 0; i < 5; i++) {
       if (i < filledStars) {

@@ -55,7 +55,6 @@ function FicheLogement({ jsonData }) {
         content={logementData.equipments.join(' ')}
         icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
       </div>
-
     </div>
   );
 }

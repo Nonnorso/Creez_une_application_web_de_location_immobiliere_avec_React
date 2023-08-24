@@ -1,7 +1,6 @@
 import '../../Styles/index.scss'
 import FooterLogo from '../../assets/Footer_LOGO.png'
 
- 
 function Footer() {
     return (
         <div className="footerStyle FlexColumn">

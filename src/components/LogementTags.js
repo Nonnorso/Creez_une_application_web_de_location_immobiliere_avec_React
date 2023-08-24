@@ -1,6 +1,7 @@
 import React from 'react';
 
 const LogementTags = ({ tags }) => {
+  
   return (
     <div className="logementTags FlexRow">
         {tags.map((tag, index) => (

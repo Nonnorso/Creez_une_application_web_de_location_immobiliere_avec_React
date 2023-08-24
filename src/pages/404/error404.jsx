@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import '../../Styles/index.scss'
 
 function Error404() {
+    
     return (
         <div className="FlexColumn Style404">
             <h1 className="RedText Title404">404</h1>

@@ -4,18 +4,13 @@ import rightArrowIcon from '../assets/Vector.png';
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  };
-
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));};
   const handleNextClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  };
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));};
 
   return (
     <div className="CarousselContainer">
-
         <div className="CarousselImage">
             <img src={images[currentIndex]} alt={`${currentIndex + 1}`} />
         </div>
@@ -36,7 +31,6 @@ const Slideshow = ({ images }) => {
             alt="Next"
             className="NavArrow RightArrow"
             onClick={handleNextClick}/>
-        
       </div>
     </div>
   );
