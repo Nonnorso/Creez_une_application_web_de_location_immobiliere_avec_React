@@ -20,8 +20,16 @@ const Collapse = ({ title, content, icon }) => {
       </div>
       <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
         {isOpen && (
-          <div className={`collapseTxt SmallText RedText`}>
-            {content}
+          <div className={`collapseTxt ${title === "Équipements" ? "listStyle" : ""} SmallText RedText`}>
+            {title === "Équipements" ? (
+              <ul>
+                {content.split(' ').map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              content
+            )}
           </div>
         )}
       </div>

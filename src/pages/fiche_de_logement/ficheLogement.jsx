@@ -24,7 +24,7 @@ function FicheLogement({ jsonData }) {
         <Slideshow images={logementData.pictures} />
       </div>
 
-      <div className="FlexRow">
+      <div className="FlexRow LogementDisposition">
         <div>
           <div>
             <LogementPresentation title={logementData.title} location={logementData.location} />
@@ -35,7 +35,7 @@ function FicheLogement({ jsonData }) {
           </div>
         </div>
 
-        <div>
+        <div className="LogementHostAndRateStyle">
           <div>
             <LogementHost host={logementData.host} />
           </div>
@@ -47,8 +47,13 @@ function FicheLogement({ jsonData }) {
       </div>
 
       <div className='FlexRow LogementCollapseStyle'>
-        <Collapse title="Description" content={logementData.description} icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
-        <Collapse title="Équipements" content={logementData.equipments.join(', ')} icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
+        <Collapse title="Description" 
+        content={logementData.description} 
+        icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
+
+        <Collapse title="Équipements" 
+        content={logementData.equipments.join(' ')}
+        icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
       </div>
 
     </div>

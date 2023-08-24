@@ -409,6 +409,7 @@ img{
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   height: 415px;
   position: relative;
   overflow: hidden;
@@ -418,11 +419,13 @@ img{
 
   img{
     width:100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .CarousselImage {
     width: 100%; 
-    height: auto; 
+    height: 100%; 
     object-fit: cover;
   }
 
@@ -431,6 +434,10 @@ img{
     bottom: 24.92px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media (max-width: $smallScreen) {
+      display:none;
+    }
   }
 
   .CarousselNav {
@@ -444,6 +451,11 @@ img{
       height: 79.2px;
       cursor: pointer;
       position: absolute;
+
+      @media (max-width: $smallScreen) {
+        width: 14px;
+        height: 24px; 
+        }
     }
 
     .LeftArrow {
@@ -454,9 +466,22 @@ img{
       right: 23.36px;
     }
   }
+
+  @media (max-width: $smallScreen) {
+    height: 255px;
+    margin-bottom:15px;
+    }
 }
 
 //** LogementPage Components **//
+.LogementDisposition{
+
+  @media (max-width: $smallScreen) {
+    display:flex;
+    flex-direction: column;
+    }
+}
+
 .logementPresentation{
   margin-bottom: 20px;
   
@@ -465,7 +490,16 @@ img{
     font-size: 36px;
     font-style: normal;
     font-weight: 500; 
+
+    @media (max-width: $smallScreen) {
+      font-size: 18px;
+      }
   }
+
+  @media (max-width: $smallScreen) {
+    gap:5px;
+    margin-bottom: 10px;
+    } 
 }
 
 .logementTags{
@@ -473,6 +507,7 @@ img{
   display: flex;
   justify-content: flex-start;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 
   .Tag{
     display: flex;
@@ -485,12 +520,31 @@ img{
     font-size: 14px;
     font-style: normal;
     font-weight: 500; 
-    padding: 5px 30px;  
+    padding: 5px 25px; 
+    
+    @media (max-width: $smallScreen) {
+      font-size: 10px;
+      padding: 5px 15px;
+      }
   }
+
+  @media (max-width: $smallScreen) {
+    margin-bottom:16px;
+    }
+}
+
+.LogementHostAndRateStyle{
+
+  @media (max-width: $smallScreen) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    }
 }
 
 .logementHost{
-  gap: 10px;
+  gap: 11px;
   margin-bottom:10px;
 
   img{
@@ -498,6 +552,11 @@ img{
     height: 64px;
     flex-shrink: 0;
     border-radius: 32px;
+
+    @media (max-width: $smallScreen) {
+      width: 33px;
+      height: 33px;
+      }
   }
 
   p{
@@ -505,7 +564,15 @@ img{
     text-align: right;
     align-items: center;
     display:flex;
+
+    @media (max-width: $smallScreen) {
+      width: 70px;
+      }
   }
+
+  @media (max-width: $smallScreen) {
+    margin-bottom:13px;
+    }
 }
 
 .rating{
@@ -514,6 +581,21 @@ img{
   justify-content: space-between;
   height: 36px;
   align-items: center;
+
+  img{
+    width: 24.75px;
+    height: 24px; 
+
+    @media (max-width: $smallScreen) {
+      width: 13.406px;
+      height: 13px; 
+      }
+  }
+
+    @media (max-width: $smallScreen) {
+      height: 18px;
+      gap:8px;
+      }
 }
 
 .LogementCollapseStyle{
@@ -522,5 +604,15 @@ img{
   
   .collapseBtn{
     border-radius:10px;
+
+    @media (max-width: $smallScreen) {
+      border-radius:5px;
+      }
   }
+
+  @media (max-width: $smallScreen) {
+    flex-direction: column;
+    gap:20px;
+    margin-bottom: 27px;
+    }
 }
