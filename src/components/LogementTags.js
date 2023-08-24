@@ -2,12 +2,10 @@ import React from 'react';
 
 const LogementTags = ({ tags }) => {
   return (
-    <div className="logement-tags">
-      <ul>
+    <div className="logementTags FlexRow">
         {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
+          <div className="Tag WhiteText" key={index}>{tag}</div>
         ))}
-      </ul>
     </div>
   );
 };

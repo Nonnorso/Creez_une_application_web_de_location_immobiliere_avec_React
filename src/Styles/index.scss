@@ -4,6 +4,7 @@ $grey:rgba(246, 246, 246, 1);
 $white :rgba(255, 255, 255, 1);
 $black:rgba(0, 0, 0, 1);
 
+//** General **//
 body {
   margin-left: 100px;
   margin-right:100px;
@@ -27,7 +28,7 @@ code {
     monospace;
 }
 
-h1, p, a {
+h1, h2, p, a {
   margin:0px;
   padding:0px;
 }
@@ -81,6 +82,17 @@ a {
   }
 }
 
+.FlexRow{
+  display: flex;
+  justify-content: space-between;
+}
+
+.FlexColumn{
+  display:flex;
+  flex-direction: column;
+}
+
+//** Page 404 **//
 .Txt404{
   font-family: Montserrat;
   font-size: 36px;
@@ -108,16 +120,24 @@ a {
   }
 }
 
-.FlexRow{
-  display: flex;
-  justify-content: space-between;
-}
+.Style404{
+  margin-top:139px;
+  margin-bottom:139px;
+  gap:139px;
+  align-items: center;
+  
+    a{
+      text-decoration: underline;
+    }
+  
+  @media (max-width: $smallScreen) {
+    margin-top:113px;
+    margin-bottom:113px;
+    gap:113px;
+  }
+  }
 
-.FlexColumn{
-  display:flex;
-  flex-direction: column;
-}
-
+//** HeaderNav **//
 .NavStyle{
 margin-top:45px;
 margin-bottom:50px;
@@ -149,6 +169,7 @@ img{
 }
 }
 
+//** BannerStyle **//
 .k-banner{
   mix-blend-mode: darken;
   border-radius: 25px;
@@ -196,6 +217,7 @@ img{
 }
 }
 
+//**  Footer **//
 .footerStyle{
   background-color: $black;
   margin-right: -100px;
@@ -226,24 +248,7 @@ img{
   }
 }
 
-.Style404{
-margin-top:139px;
-margin-bottom:139px;
-gap:139px;
-align-items: center;
-
-  a{
-    text-decoration: underline;
-  }
-
-@media (max-width: $smallScreen) {
-  margin-top:113px;
-  margin-bottom:113px;
-  gap:113px;
-}
-
-}
-
+//** Cards **//
 .house-card {
   position: relative;
   width: 100%;
@@ -312,6 +317,7 @@ align-items: center;
   }
 }
 
+//** Collapse **//
 .collapse{
   gap:30px;
   align-items: center;
@@ -346,7 +352,7 @@ align-items: center;
 .collapseIcon{
   cursor: pointer;
   flex-shrink: 0; 
-  transition: transform 0.3s ease-out;transform-origin: center center;
+  transition: transform 0.4s ease-out;transform-origin: center center;
 
   @media (max-width: $smallScreen) {
   img{
@@ -367,7 +373,7 @@ align-items: center;
   border-bottom-right-radius:5px;
   overflow: hidden;
   transform-origin: top;
-  animation: slideDownAnimation 0.2s ease-out;
+  animation: slideDownAnimation 0.4s ease-out;
 }
 
 .collapseOpen {
@@ -391,23 +397,24 @@ align-items: center;
 .collapseTxtContainer {
   overflow: hidden;
   transform-origin: top;
-  -webkit-animation: slideDownAnimation 0.2s ease-out;
-  animation: slideDownAnimation 0.2s ease-out;
+  -webkit-animation: slideDownAnimation 0.4s ease-out;
+  animation: slideDownAnimation 0.4s ease-out;
   position: relative;
 }
 
+//** Caroussel **//
 .CarousselContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1240px; 
   height: 415px;
   position: relative;
   overflow: hidden;
   border-radius: 25px; 
   margin: 0 auto;
+  margin-bottom: 30px;
 
   img{
     width:100%;
@@ -446,5 +453,74 @@ align-items: center;
     .RightArrow {
       right: 23.36px;
     }
+  }
+}
+
+//** LogementPage Components **//
+.logementPresentation{
+  margin-bottom: 20px;
+  
+  h2{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500; 
+  }
+}
+
+.logementTags{
+  gap:10px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+
+  .Tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #FF6060; 
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500; 
+    padding: 5px 30px;  
+  }
+}
+
+.logementHost{
+  gap: 10px;
+  margin-bottom:10px;
+
+  img{
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 32px;
+  }
+
+  p{
+    width:93px;
+    text-align: right;
+    align-items: center;
+    display:flex;
+  }
+}
+
+.rating{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  height: 36px;
+  align-items: center;
+}
+
+.LogementCollapseStyle{
+  gap:76px;
+  margin-bottom: 50px;
+  
+  .collapseBtn{
+    border-radius:10px;
   }
 }

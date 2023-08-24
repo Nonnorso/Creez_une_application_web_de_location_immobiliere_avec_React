@@ -20,7 +20,7 @@ const Collapse = ({ title, content, icon }) => {
       </div>
       <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
         {isOpen && (
-          <div className={`collapseTxt MediumSizeText RedText`}>
+          <div className={`collapseTxt SmallText RedText`}>
             {content}
           </div>
         )}
