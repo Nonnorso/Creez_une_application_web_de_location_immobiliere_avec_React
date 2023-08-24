@@ -47,12 +47,15 @@ function FicheLogement({ jsonData }) {
       </div>
 
       <div className='FlexRow LogementCollapseStyle'>
-        <Collapse title="Description" 
+        <Collapse 
+        title="Description" 
         content={logementData.description} 
         icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
 
-        <Collapse title="Équipements" 
-        content={logementData.equipments.join(' ')}
+        <Collapse
+        title="Équipements"
+        parent="equipments"
+        content={logementData.equipments.join('\n')}      
         icon={<img src={collapseIcon} alt="Icône de Collapse" />} />
       </div>
     </div>

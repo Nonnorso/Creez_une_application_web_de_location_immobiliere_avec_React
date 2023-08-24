@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 
-const Collapse = ({ title, content, icon }) => {
+const Collapse = ({ title, parent, content, icon }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
   };
 
+  const EquipmentsList = content.split('\n').map((line, index) => (
+    <li key={index}>{line}</li>
+  ));
+
   return (
     <div className={`collapseOpen FlexColumn`}>
-
       <div className="collapseBtn FlexRow" onClick={toggleCollapse}>
         <p className="WhiteText MediumSizeText">{title}</p>
         {icon && (
@@ -20,16 +23,10 @@ const Collapse = ({ title, content, icon }) => {
 
       <div className={`collapseTxtContainer ${isOpen ? 'open' : ''}`}>
         {isOpen && (
-          <div className={`collapseTxt ${title === "Équipements" ? "listStyle" : ""} SmallText RedText`}>
-            {title === "Équipements" ? (
-              <ul>
-                {content.split(' ').map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-              ) 
-              : (content)
-            }
+          <div className={`collapseTxt SmallText RedText`}>
+            <ul>
+              {EquipmentsList}
+            </ul>
           </div>
         )}
       </div>
