@@ -102,14 +102,13 @@ a {
   font-size: 36px;
   font-style: normal;
   font-weight: 500; 
+  line-height: 142.6%;
   text-align: center;
-  line-height:51.336px;
 
   @media (max-width:$smallScreen) {
     font-size: 18px;
     margin-left:58px;
     margin-right:58px;
-    line-height:25.668px;
   }
 }
 
@@ -118,6 +117,7 @@ a {
   font-size: 288px;
   font-style: normal;
   font-weight: 700; 
+  line-height: 142.6%;
 
   @media (max-width:$smallScreen) {
     font-size: 96px; 
@@ -216,7 +216,8 @@ img{
     p {
       text-align: left;
       margin-left: 16px;
-      margin-right:140px;
+      margin-right:100px;
+      line-height: 100%;
     }
 }
 }
@@ -252,7 +253,7 @@ img{
   }
 }
 
-//** Cards **//
+//** HomePage **//
 .house-card {
   position: relative;
   width: 100%;
