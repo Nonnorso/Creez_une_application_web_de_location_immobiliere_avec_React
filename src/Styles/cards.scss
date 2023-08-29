@@ -1,0 +1,31 @@
+//** HomePage **//
+@import 'settings.scss';
+
+.cards-container {
+    height: 829px;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 50px 60px;
+    border-radius: 25px;
+    background: $grey;
+    padding-top:56px;
+    padding-bottom:43px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    margin-bottom:50px;
+    box-sizing: border-box;
+  
+    @media (max-width: $smallScreen) {
+      background: none;
+      grid-template-columns: 1fr;
+      padding:0;
+      gap:20px;
+      height: 805px;
+      margin-bottom:27px;
+    }
+  }

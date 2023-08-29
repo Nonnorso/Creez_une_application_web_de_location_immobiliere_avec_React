@@ -1,0 +1,25 @@
+//**  LogementRating Component **//
+@import 'settings.scss';
+
+.rating{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    align-items: center;
+  
+    img{
+      width: 24.75px;
+      height: 24px; 
+  
+      @media (max-width: $smallScreen) {
+        width: 13.406px;
+        height: 13px; 
+        }
+    }
+  
+      @media (max-width: $smallScreen) {
+        height: 18px;
+        gap:8px;
+        }
+  }

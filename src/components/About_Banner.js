@@ -1,4 +1,5 @@
 import AboutBanner from '../assets/A_Propos_Banner.png'
+import "../Styles/banner.scss"
 
 function aboutBanner() {
     

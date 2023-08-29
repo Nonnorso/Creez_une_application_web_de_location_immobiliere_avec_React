@@ -1,3 +1,4 @@
+import "../Styles/banner.scss"
 import HomeBanner from '../assets/Home_banner.png'
 
 function homeBanner() {

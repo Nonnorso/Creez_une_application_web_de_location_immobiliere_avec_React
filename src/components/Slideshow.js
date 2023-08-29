@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import leftArrowIcon from '../assets/VectorLeft_vector.png';
 import rightArrowIcon from '../assets/Vector.png';
+import "../Styles/slideShow.scss"
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

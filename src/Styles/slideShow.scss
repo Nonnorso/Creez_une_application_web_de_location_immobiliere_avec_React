@@ -1,0 +1,72 @@
+//** Caroussel **//
+@import 'settings.scss';
+
+.CarousselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    height: 415px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px; 
+    margin: 0 auto;
+    margin-bottom: 30px;
+  
+    img{
+      width:100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .CarousselImage {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+    }
+  
+    .CarousselCounter {
+      position: absolute;
+      bottom: 24.92px;
+      left: 50%;
+      transform: translateX(-50%);
+  
+      @media (max-width: $smallScreen) {
+        display:none;
+      }
+    }
+  
+    .CarousselNav {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      Width:100%;
+  
+      .NavArrow {
+        width: 46.68px;
+        height: 79.2px;
+        cursor: pointer;
+        position: absolute;
+  
+        @media (max-width: $smallScreen) {
+          width: 14px;
+          height: 24px; 
+          }
+      }
+  
+      .LeftArrow {
+        left: 23.36px;
+      }
+  
+      .RightArrow {
+        right: 23.36px;
+      }
+    }
+  
+    @media (max-width: $smallScreen) {
+      height: 255px;
+      margin-bottom:15px;
+      }
+  }

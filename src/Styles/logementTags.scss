@@ -1,0 +1,33 @@
+//** LogementTags Component **//
+@import 'settings.scss';
+
+.logementTags{
+    gap:10px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  
+    .Tag{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #FF6060; 
+      text-align: center;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500; 
+      padding: 5px 25px; 
+      
+      @media (max-width: $smallScreen) {
+        font-size: 10px;
+        padding: 5px 15px;
+        }
+    }
+  
+    @media (max-width: $smallScreen) {
+      margin-bottom:16px;
+      }
+  }

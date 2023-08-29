@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Collapse from '../../components/Collapse';
 import collapseIcon from '../../assets/arrow_back_ios-24px 2.png';

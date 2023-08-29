@@ -1,4 +1,4 @@
-import React from 'react';
+import "../Styles/logementPresentation.scss"
 
 const LogementPresentation = ({ title, location }) => {
   

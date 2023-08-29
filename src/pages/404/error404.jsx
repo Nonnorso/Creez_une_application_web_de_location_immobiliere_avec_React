@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../../Styles/index.scss'
+import '../../Styles/error404.scss'
 
 function Error404() {
     

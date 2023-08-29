@@ -1,0 +1,10 @@
+/** Fiche de logement **/
+@import 'settings.scss';
+
+.LogementDisposition{
+
+    @media (max-width: $smallScreen) {
+      display:flex;
+      flex-direction: column;
+      }
+  }

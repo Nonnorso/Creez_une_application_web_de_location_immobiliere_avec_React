@@ -1,6 +1,6 @@
-import React from 'react';
 import emptyStarIcon from '../assets/Vectoremptystar.png';
 import filledStarIcon from '../assets/VectorRateStars.png';
+import "../Styles/logementRating.scss"
 
 const LogementRating = ({ rating }) => {
     const filledStars = Math.round(rating / 1);

@@ -7,30 +7,36 @@ import Header from '../../components/Header/Navigation';
 import Footer from '../../components/Footer/FooterInfos';
 import CheckLogement from '../CheckLogement';
 import jsonData from '../../datas/Annonces.json';
+import '../../Styles/index.scss'
+import '../../Styles/routeur.scss'
 
 function AppRouter() {
 
-  // const [jsonData, setJsonData] = useState([]); 
+//   const [jsonData, setJsonData] = useState([]); 
 
-  // useEffect(() => {
-  //   fetch('/Annonces.json')
-  //     .then(response => response.json())
-  //     .then(data => setJsonData(data))
-  //     .catch(error => console.error('Error fetching data:', error));
-  // }, []);
+//   useEffect(() => {
+//     fetch('/Annonces.json')
+//       .then(response => response.json())
+//       .then(data => setJsonData(data))
+//       .catch(error => console.error('Error fetching data:', error));
+//   }, []);
   
-    return (
-      <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<App jsonData={jsonData} />} />
-        <Route path="/logement/:id" element={<CheckLogement jsonData={jsonData} />} />
-        <Route path="/about" element={<APropos />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+return (
+  <Router>
+    <div className="RouterPageContainer">
+      <div className="RouteurPage">
+        <Header />
+        <Routes>
+          <Route path="/" element={<App jsonData={jsonData} />} />
+          <Route path="/logement/:id" element={<CheckLogement jsonData={jsonData} />} />
+          <Route path="/about" element={<APropos />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </div>
       <Footer />
-    </Router>
-  );
+    </div>
+  </Router>
+);
 }
   
   export default AppRouter;

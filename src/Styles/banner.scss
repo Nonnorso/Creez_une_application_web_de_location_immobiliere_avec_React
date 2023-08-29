@@ -1,0 +1,50 @@
+//** BannerStyle **//
+@import 'settings.scss';
+
+.k-banner{
+    mix-blend-mode: darken;
+    border-radius: 25px;
+    background: $black; 
+    height: 223px;  
+    margin-bottom:43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+  
+    img{ 
+    border-radius: 25px;
+    opacity: 0.7;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    }
+  
+    p{
+      position: absolute;
+      text-align: center;
+    }
+  
+    &.B2{
+      margin-bottom:38px;
+    }
+  
+    @media (max-width: $smallScreen) {
+      &.B1{
+        height:111px;
+        margin-bottom:22px;
+      }  
+  
+      &.B2{
+        height: 223px; 
+        margin-bottom:19px;
+      }
+  
+      p {
+        text-align: left;
+        margin-left: 16px;
+        margin-right:100px;
+        line-height: 100%;
+      }
+  }
+  }

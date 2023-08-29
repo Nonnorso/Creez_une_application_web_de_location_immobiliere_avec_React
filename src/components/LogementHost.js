@@ -1,4 +1,4 @@
-import React from 'react';
+import "../Styles/logementHost.scss"
 
 const LogementHost = ({ host }) => {
   

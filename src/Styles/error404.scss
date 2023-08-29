@@ -1,0 +1,46 @@
+//** Page 404 **//
+@import 'settings.scss';
+
+.Txt404{
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500; 
+    line-height: 142.6%;
+    text-align: center;
+  
+    @media (max-width:$smallScreen) {
+      font-size: 18px;
+      margin-left:58px;
+      margin-right:58px;
+    }
+  }
+  
+  .Title404{
+    font-family: Montserrat;
+    font-size: 288px;
+    font-style: normal;
+    font-weight: 700; 
+    line-height: 142.6%;
+  
+    @media (max-width:$smallScreen) {
+      font-size: 96px; 
+    }
+  }
+  
+  .Style404{
+    margin-top:139px;
+    margin-bottom:139px;
+    gap:139px;
+    align-items: center;
+    
+      a{
+        text-decoration: underline;
+      }
+    
+    @media (max-width: $smallScreen) {
+      margin-top:113px;
+      margin-bottom:113px;
+      gap:113px;
+    }
+    }
