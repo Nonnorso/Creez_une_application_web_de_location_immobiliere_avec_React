@@ -6,6 +6,7 @@ import LogementRating from '../../components/LogementRating';
 import LogementHost from '../../components/LogementHost';
 import LogementTags from '../../components/LogementTags';
 import LogementPresentation from '../../components/LogementPresentation';
+import '../../Styles/ficheLogement.scss'
 
 function FicheLogement({ jsonData }) {
   const { id } = useParams();
