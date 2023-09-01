@@ -9,6 +9,7 @@ const Slideshow = ({ images }) => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));};
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));};
+  const shouldShowNavigation = images.length > 1;
 
   return (
     <div className="CarousselContainer">
@@ -16,6 +17,13 @@ const Slideshow = ({ images }) => {
             <img src={images[currentIndex]} alt={`${currentIndex + 1}`} />
         </div>
 
+    {shouldShowNavigation && (
+        <>
+
+        <div className="CarousselCounter SmallText WhiteText">
+          {currentIndex + 1}/{images.length}
+        </div>
+        
         <div className="CarousselCounter SmallText WhiteText">
           {currentIndex + 1}/{images.length}
         </div>
@@ -33,6 +41,8 @@ const Slideshow = ({ images }) => {
             className="NavArrow RightArrow"
             onClick={handleNextClick}/>
       </div>
+      </>
+      )}
     </div>
   );
 };
