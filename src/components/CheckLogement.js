@@ -10,7 +10,7 @@ function CheckLogement({ jsonData }) {
     return <Navigate to="/404" />;
   }
 
-  return <FicheLogement jsonData={jsonData} />; // Passez les données JSON à FicheLogement
+  return <FicheLogement jsonData={jsonData} />;
 }
 
 export default CheckLogement;
