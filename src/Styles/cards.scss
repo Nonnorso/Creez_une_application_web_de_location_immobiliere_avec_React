@@ -2,7 +2,6 @@
 @import 'settings.scss';
 
 .cards-container {
-    height: 829px;
     max-width: 1240px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -16,7 +15,6 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    overflow: auto;
     margin-bottom:50px;
     box-sizing: border-box;
   
